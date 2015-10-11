@@ -5,7 +5,3 @@ else {
     window.alert("下次記得去對網頁喔~~");
 }
 
-$("#me").animate({ 
-    opacity: 0.4,
-    marginReft: 10
-  }, 1500 );
