@@ -14,7 +14,7 @@
     urlData = url.parse(req.url, true);  
     action = urlData.pathname;  
     publicPath = __dirname + "\\public\\";  
-    if (action == "/signup") {  
+    if (action == "/Signup") {  
       if (req.method == "POST") {  
         formData = '';  
         msg = '';  
