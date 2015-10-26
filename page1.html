@@ -11,25 +11,6 @@
                         <label>使用者名稱：</label><input type="text" id="username" name="username" /><br>  
                         <label>電子郵件：</label><input type="text" id="email" name="email" /><br>  
                         <input type="submit" value="註冊我的帳號" /><br>  
-                </div>  
-                <script type="text/javascript">  
-                    $(function(){  
-                       $('#signup input[type="submit"]').click(function(e){                            
-                            e.preventDefault();  
-                           var user = {};  
-                           user.username = $("#username").val();  
-                           user.email = $("#email").val();  
-                           $.post("/Signup",user,function(data){  
-                                    greet(data)                               
-                                 });  
-                          });  
-                                 
-                        var greet = function(msg){  
-                               $('#signup').html("");  
-                                 var greeting = $('<h2>Hi,'+msg.username+',你的會員id是:'+ msg.id +'我們會將會員啟動信寄至'+msg.email+'</h2>');  
-                               $('#signup').append(greeting);  
-                          };         
-                    });        
-                </script>           
+                </div> 
         </body>  
     </html>  
