@@ -14,8 +14,8 @@
     urlData = url.parse(req.url, true);  
     action = urlData.pathname;  
     publicPath = __dirname + "\\public\\";  
-    if (action === "/Signup") {  
-      if (req.method === "POST") {  
+    if (action == "/Signup") {  
+      if (req.method == "POST") {  
         formData = '';  
         msg = '';  
         return req.on('data', function(data) {  
@@ -35,7 +35,7 @@
       } else {  
         form = publicPath + "ajaxSignupForm.html";  
         return fs.readFile(form, function(err, contents) {  
-          if (err !== true) {  
+          if (err != true) {  
             res.writeHead(200, {  
               "Content-Type": "text/html"  
             });  
