@@ -1,4 +1,4 @@
-function() {  
+(function() {  
   var fs, http, qs, server, url;  
   
   http = require('http');  
