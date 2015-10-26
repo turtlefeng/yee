@@ -14,7 +14,7 @@
     urlData = url.parse(req.url, true);  
     action = urlData.pathname;  
     publicPath = __dirname + "\\public\\";  
-    if (action == "/Signup") {  
+    if (action == "/signup") {  
       if (req.method == "POST") {  
         formData = '';  
         msg = '';  
@@ -33,7 +33,7 @@
           });  
         });  
       } else {  
-        form = publicPath + "ajaxSignupForm.html";  
+        form = publicPath + "page1.html";  
         return fs.readFile(form, function(err, contents) {  
           if (err != true) {  
             res.writeHead(200, {  
@@ -50,7 +50,7 @@
       res.writeHead(200, {  
         "Content-Type": "text/html"  
       });  
-      return res.end("<h1>歡迎光臨Node.js菜鳥筆記</h1><p><a href=\"/Signup\">註冊</a></p>");  
+      return res.end("<h1>歡迎光臨Node.js菜鳥筆記</h1><p><a href=\"/signup\">註冊</a></p>");  
     }  
   });  
   
